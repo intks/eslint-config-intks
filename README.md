@@ -23,6 +23,7 @@ This configuration includes carefully selected rules and plugins:
 | Category | Package | Description |
 |----------|---------|-------------|
 | **Core** | `eslint:recommended` | ESLint's recommended rules |
+| | `eslint-config-airbnb` | Airbnb's base JS/React style guide |
 | | `prettier` | Formatting rules that work with Prettier |
 | **TypeScript** | `@typescript-eslint/recommended` | Recommended TypeScript rules |
 | | `@typescript-eslint/parser` | TypeScript parser with modern ECMAScript support |
@@ -34,7 +35,6 @@ This configuration includes carefully selected rules and plugins:
 | | `plugin:import/warnings` | Import warnings |
 | | `plugin:import/typescript` | TypeScript import resolution |
 | | `unused-imports` | Dead code elimination |
-
 
 ## Installation
 
