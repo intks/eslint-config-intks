@@ -22,17 +22,16 @@ This configuration includes carefully selected rules and plugins:
 
 | Category | Package | Description |
 |----------|---------|-------------|
-| **Core** | `eslint:recommended` | ESLint's recommended rules |
-| | `eslint-config-airbnb` | Airbnb's base JS/React style guide |
+| **Core** | `@typescript-eslint/parser` | TypeScript parser with modern ECMAScript support |
 | | `prettier` | Formatting rules that work with Prettier |
 | **TypeScript** | `@typescript-eslint/recommended` | Recommended TypeScript rules |
-| | `@typescript-eslint/parser` | TypeScript parser with modern ECMAScript support |
+| | `@typescript-eslint/recommended-requiring-type-checking` | Strict TypeScript type checking rules |
 | **React** | `plugin:react/recommended` | React recommended rules |
 | | `plugin:react/jsx-runtime` | Support for React 17+ JSX transform |
 | | `plugin:react-hooks/recommended` | React Hooks rules |
+| | `eslint-plugin-react-compiler` | React compiler optimizations |
 | **Accessibility** | `plugin:jsx-a11y/recommended` | Web accessibility rules |
-| **Imports** | `plugin:import/errors` | Import statement validation |
-| | `plugin:import/warnings` | Import warnings |
+| **Imports** | `plugin:import/recommended` | Import statement validation |
 | | `plugin:import/typescript` | TypeScript import resolution |
 | | `unused-imports` | Dead code elimination |
 
@@ -40,12 +39,12 @@ This configuration includes carefully selected rules and plugins:
 
 Using npm:
 ```sh
-npm install --save-dev eslint eslint-config-intks @babel/core @babel/eslint-parser
+npm install --save-dev prettier eslint eslint-config-intks @babel/core @babel/eslint-parser
 ```
 
 Using yarn:
 ```sh
-yarn add -D eslint eslint-config-intks @babel/core @babel/eslint-parser
+yarn add -D prettier eslint eslint-config-intks @babel/core @babel/eslint-parser
 ```
 
 ## Usage
