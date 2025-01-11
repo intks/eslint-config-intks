@@ -24,7 +24,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:prettier/recommended',
   ],
   plugins: [
     '@typescript-eslint',
@@ -33,7 +32,6 @@ module.exports = {
     'jsx-a11y',
     'import',
     'unused-imports',
-    'prettier',
   ],
   rules: {
     // React & JSX rules
