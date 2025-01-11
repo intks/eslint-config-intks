@@ -1,6 +1,6 @@
 # eslint-config-intks
 
-[![npm version](https://badge.fury.io/js/eslint-config-intks.svg)](https://badge.fury.io/js/eslint-config-intks)
+[![npm version](https://img.shields.io/npm/v/eslint-config-intks?style=flat-square)](https://www.npmjs.com/package/eslint-config-intks)
 
 A shareable ESLint configuration package that enforces consistent code style and best practices across JavaScript/TypeScript projects.
 

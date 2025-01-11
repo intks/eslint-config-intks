@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-intks",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "[eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "eslint": ">= 8"
   },
   "author": "alex.chen <shift1255@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/intks/eslint-config-intks/issues"
   },
