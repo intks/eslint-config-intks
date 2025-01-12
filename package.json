@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-intks",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "[eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.6.0",
