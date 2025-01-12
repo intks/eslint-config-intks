@@ -23,17 +23,17 @@ This configuration includes carefully selected rules and plugins:
 | Category | Package | Description |
 |----------|---------|-------------|
 | **Core** | `@typescript-eslint/parser` | TypeScript parser with modern ECMAScript support |
-| | `prettier` | Formatting rules that work with Prettier |
+| | `eslint:recommended` | ESLint's recommended rules |
 | **TypeScript** | `@typescript-eslint/recommended` | Recommended TypeScript rules |
-| | `@typescript-eslint/recommended-requiring-type-checking` | Strict TypeScript type checking rules |
 | **React** | `plugin:react/recommended` | React recommended rules |
 | | `plugin:react/jsx-runtime` | Support for React 17+ JSX transform |
 | | `plugin:react-hooks/recommended` | React Hooks rules |
-| | `eslint-plugin-react-compiler` | React compiler optimizations |
 | **Accessibility** | `plugin:jsx-a11y/recommended` | Web accessibility rules |
-| **Imports** | `plugin:import/recommended` | Import statement validation |
+| **Imports** | `plugin:import/errors` | Import statement validation |
+| | `plugin:import/warnings` | Import warnings |
 | | `plugin:import/typescript` | TypeScript import resolution |
 | | `unused-imports` | Dead code elimination |
+
 
 ## Installation
 
@@ -56,26 +56,6 @@ Add the following to your `.eslintrc.js` or `.eslintrc.json`:
 ```js
 module.exports = {
   extends: 'eslint-config-intks',
-};
-```
-
-### With TypeScript
-
-For TypeScript projects, ensure you have the following dependencies installed:
-
-```sh
-npm install --save-dev typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
-
-Then update your `.eslintrc.js`:
-
-```js
-module.exports = {
-  extends: 'eslint-config-intks',
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-  },
 };
 ```
 
