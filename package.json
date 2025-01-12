@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-intks",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "[eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-compiler": "0.0.0-experimental-51a85ea-20240601",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-config-prettier": "^8.5.0"
+    "eslint-plugin-unused-imports": "^3.0.0"
   },
   "peerDependencies": {
     "@babel/core": ">= 7",

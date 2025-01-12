@@ -16,18 +16,19 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'prettier',
   ],
- plugins: ['react', '@typescript-eslint', 'eslint-plugin-import', 'eslint-plugin-react-compiler', 'unused-imports'],
+  plugins: ['react', '@typescript-eslint', 'eslint-plugin-import', 'unused-imports'],
   rules: {
- 'no-undef': 'warn',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -47,9 +48,32 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
+    // TODO: Refactor all warning at this rule
     '@typescript-eslint/no-unsafe-enum-comparison': 'warn',
+    // '@typescript-eslint/no-use-before-define': [
+    //     'error',
+    //     {
+    //         functions: false,
+    //         classes: true,
+    //         variables: true,
+    //         typedefs: false,
+    //         ignoreTypeReferences: true,
+    //     },
+    // ],
     '@typescript-eslint/comma-dangle': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
+    // TODO: discuss naming convention rules
+    // '@typescript-eslint/naming-convention': [
+    //     'error',
+    //     {
+    //         selector: 'enum',
+    //         format: null,
+    //         custom: {
+    //             regex: '^[A-Z][A-Z0-9]*(__?[A-Z0-9]+)*$',
+    //             match: true,
+    //         },
+    //     },
+    // ],
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
@@ -76,6 +100,19 @@ module.exports = {
       },
     ],
     eqeqeq: ['error', 'always'],
+    // TODO: discuss dependencies check
+    // 'import/no-extraneous-dependencies': [
+    //     'error',
+    //     {
+    //         devDependencies: [
+    //             '**/*.test.{js,jsx,ts,tsx}',
+    //             '**/*.stories.{js,jsx,ts,tsx}',
+    //             '**/rollup.config.js',
+    //         ],
+    //         peerDependencies: true,
+    //         packageDir,
+    //     },
+    // ],
     'import/prefer-default-export': 'off',
     'import/first': 'error',
     'import/newline-after-import': 'error',
@@ -112,7 +149,6 @@ module.exports = {
     ],
     'import/namespace': 'warn',
     'import/no-named-as-default-member': 'off',
-    'react-compiler/react-compiler': 'warn',
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
@@ -143,14 +179,6 @@ module.exports = {
       },
     },
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'no-undef': 'off',
-      },
-    },
-  ],
   ignorePatterns: [
     'dist',
     'build',
@@ -162,5 +190,5 @@ module.exports = {
     'public',
     '.next',
     'out',
-  ]
+  ],
 };
