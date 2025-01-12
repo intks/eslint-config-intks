@@ -6,13 +6,13 @@ A shareable ESLint configuration package that enforces consistent code style and
 
 ## Features
 
+- Airbnb style guide integration
+- TypeScript support
 - React & React Hooks best practices
 - Accessibility (jsx-a11y) rules
 - Import sorting and organization
-- Dead code elimination
-- Unused imports detection
 - Consistent code formatting with Prettier
-- Common JavaScript best practices
+- Common JavaScript/TypeScript best practices
 
 ## What's Inside?
 
@@ -22,29 +22,26 @@ This configuration includes carefully selected rules and plugins:
 
 | Category | Package | Description |
 |----------|---------|-------------|
-| **Core** | `@typescript-eslint/parser` | TypeScript parser with modern ECMAScript support |
-| | `eslint:recommended` | ESLint's recommended rules |
-| **TypeScript** | `@typescript-eslint/recommended` | Recommended TypeScript rules |
+| **Base** | `eslint-config-airbnb` | Airbnb's ESLint config with React support |
+| **Core** | `@typescript-eslint/parser` | TypeScript parser |
+| | `@typescript-eslint/eslint-plugin` | TypeScript linting rules |
 | **React** | `plugin:react/recommended` | React recommended rules |
-| | `plugin:react/jsx-runtime` | Support for React 17+ JSX transform |
 | | `plugin:react-hooks/recommended` | React Hooks rules |
 | **Accessibility** | `plugin:jsx-a11y/recommended` | Web accessibility rules |
-| **Imports** | `plugin:import/errors` | Import statement validation |
-| | `plugin:import/warnings` | Import warnings |
+| **Imports** | `plugin:import/recommended` | Import statement validation |
 | | `plugin:import/typescript` | TypeScript import resolution |
-| | `unused-imports` | Dead code elimination |
-
+| **Formatting** | `prettier` | Code formatting rules |
 
 ## Installation
 
 Using npm:
 ```sh
-npm install --save-dev prettier eslint eslint-config-intks @babel/core @babel/eslint-parser
+npm install --save-dev eslint typescript eslint-config-intks
 ```
 
 Using yarn:
 ```sh
-yarn add -D prettier eslint eslint-config-intks @babel/core @babel/eslint-parser
+yarn add -D eslint typescript eslint-config-intks
 ```
 
 ## Usage
@@ -72,7 +69,26 @@ module.exports = {
     'react/prop-types': 'off',
     
     // Add custom rules
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
   },
 };
 ```
+
+## Key Rules Included
+
+- TypeScript strict checking
+- React hooks rules enforcement
+- Import sorting and organization
+- Accessibility guidelines
+- Console logging warnings
+- Consistent code style with Airbnb guidelines
+
+## Requirements
+
+- Node.js >= 14
+- ESLint >= 8
+- TypeScript >= 4
+
+## License
+
+MIT
